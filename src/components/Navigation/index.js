@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Link from 'next/Link';
+import Link from 'next/link';
 
 import ctActive from "./ct-active.png";
 import ctInactive from "./ct-inactive.png";
