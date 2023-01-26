@@ -5,16 +5,16 @@ import Link from 'next/Link';
 
 import ctActive from "./ct-active.png";
 import ctInactive from "./ct-inactive.png";
-import ctGradient from "./gradient-this.jpg";
+import ctGradient from "./gradient-this.png";
 import caActive from "./ca-active.png";
 import caInactive from "./ca-inactive.png";
-import caGradient from "./gradient-ar.jpg";
+import caGradient from "./gradient-ar.png";
 import cdActive from "./cd-active.png";
 import cdInactive from "./cd-inactive.png";
-import cdGradient from "./gradient-deluxe.jpg";
+import cdGradient from "./gradient-deluxe.png";
 import cnActive from "./cn-active.png";
 import cnInactive from "./cn-inactive.png";
-import cnGradient from "./gradient-together.jpg";
+import cnGradient from "./gradient-together.png";
 
 import platformApple from "./platform-iosmac.png";
 import platformAndroid from "./platform-android.png";
@@ -117,7 +117,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   background-color: ${props => props.background.color};
-  background-image: url(${props => props.background.image.src});
+  background-image: url(${props => props.background.image});
   background-repeat: repeat-x;
   background-position: top left;
   background-size: 1px 200px;
@@ -160,7 +160,7 @@ const Platform = styled.div`
   height: 33px;
   flex: 0 0 20px;
   margin: 0 5px;
-  background-image: url(${props => platformImages[props.platform]});
+  background-image: url(${props => platformImages[props.platform].src});
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -187,11 +187,11 @@ Platforms.propTypes = {
 
 const Navigation = ({ router }) => {
   const background = {
-    "/": { color: "#141519", image: cdGradient },
-    "/ar": { color: "#240e00", image: caGradient },
-    "/this": { color: "#101b05", image: ctGradient },
-    "/deluxe": { color: "#141519", image: cdGradient },
-    "/together": { color: "#141519", image: cnGradient },
+    "/": { color: "#141519", image: cdGradient.src },
+    "/ar": { color: "#240e00", image: caGradient.src },
+    "/this": { color: "#101b05", image: ctGradient.src },
+    "/deluxe": { color: "#141519", image: cdGradient.src },
+    "/together": { color: "#141519", image: cnGradient.src },
     "/privacy": { color: "#000", image: null },
     "/terms": { color: "#000", image: null },
   };
